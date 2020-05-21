@@ -1,0 +1,17 @@
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main-header {
+  flex-shrink: 0;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+.page__main-footer {
+  flex-shrink: 0;
+}

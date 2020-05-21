@@ -1,0 +1,16 @@
+.main-footer {
+  padding: 40px 0;
+}
+
+.main-footer__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: $mobile-width) {
+  .main-footer {
+    padding: 20px 0;
+  }
+}

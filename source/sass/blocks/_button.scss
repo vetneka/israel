@@ -1,0 +1,42 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 20px;
+  background-color: $main-accent-color;
+
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: $main-background-color;
+
+  box-shadow: 1px 2px 3px 0 rgba($black, 0.5);
+  outline: none;
+  cursor: pointer;
+
+  @include transition(all);
+
+  &:hover,
+  &:focus {
+    background-color: $main-accent-hover-color;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &--play-mode {
+    background-color: $main-play-color;
+
+    &:hover,
+    &:focus {
+      background-color: $main-play-hover-color;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

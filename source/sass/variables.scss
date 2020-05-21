@@ -1,0 +1,52 @@
+/* Typography */
+
+$base-font-family: "Roboto", "Arial", sans-serif;
+$base-font-size: 1.6rem;
+$base-line-height: 1.7;
+$base-font-weight: 400;
+$base-font-style: normal;
+$base-font-color: #28273a;
+
+/* Colors */
+/* Main colors */
+$main-background-color: #f5f7f6;
+$main-light-color: #e2e2e2;
+
+$main-train-color: #4c41dc;
+$main-train-hover-color: #645ff7;
+
+$main-play-color: #f87744;
+$main-play-hover-color: #f35d2b;
+
+$main-accent-color: #4fbf92;
+$main-accent-hover-color: #4aa581;
+
+/* Other colors */
+$light-gray-color: #d7d9df;
+$main-nav-link-color: #141517;
+$footer-text-color: #14151780;
+$footer-item-title-color: #141517;
+$overlay-color: #14151799;
+
+$head-text-color: #2c2e3f;
+$head-background-color: #8dafdb;
+
+$tabs-link-color: #2c2e3f4d;
+
+$white: #ffffff;
+$black: #000000;
+
+/* Viewports */
+$desktop-width: 1024px;
+$tablet-width: 1023px;
+$mobile-width: 767px;
+$mobile-middle-width: 550px;
+
+$min-viewport: 320px;
+
+$container-width-desktop: 1200px;
+$container_horizontal_offset: 15px;
+
+/* Retina */
+$min-resolution-dpi: 144dpi;
+$min-resolution-dppx: 1.5dppx;
