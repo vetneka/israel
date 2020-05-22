@@ -1,25 +1,44 @@
 /* Typography */
-
-$base-font-family: "Roboto", "Arial", sans-serif;
-$base-font-size: 1.6rem;
+/* Text */
+$base-font-family: "FiraSans", "Arial", sans-serif;
+$base-font-size: 15px;
 $base-line-height: 1.7;
 $base-font-weight: 400;
 $base-font-style: normal;
-$base-font-color: #28273a;
+$base-font-color: #484848;
+$inverse-font-color: #ffffff;
+
+$promo-font-size: $base-font-size * 1.6;
+$big-font-size: $base-font-size * 1.333;
+$small-font-size: $base-font-size * 0.867;
+
+/* Heads */
+/* Heads font-family */
+$head-primary-font-family: "Raleway", "ArialBlack", sans-serif;
+$head-secondary-font-family: "Montserrat", "Arial", sans-serif;
+
+/* Heads sizes */
+$primary-head-size: $base-font-size * 13.33;
+$primary-head-medium-size: $base-font-size * 4.8;
+
+$secondary-head-size: $base-font-size * 2.67;
+$secondary-head-medium-size: $base-font-size * 2.13;
+
+$tertiary-head-size: $base-font-size * 1.87;
+$tertiary-head-medium-size: $base-font-size * 1.6;
+
+$quaternary-head-size: $base-font-size * 1.4;
+$quaternary-head-medium-size: $base-font-size * 1.2;
+
 
 /* Colors */
 /* Main colors */
-$main-background-color: #f5f7f6;
-$main-light-color: #e2e2e2;
+$main-background-color: #ffffff;
 
-$main-train-color: #4c41dc;
-$main-train-hover-color: #645ff7;
-
-$main-play-color: #f87744;
-$main-play-hover-color: #f35d2b;
-
-$main-accent-color: #4fbf92;
-$main-accent-hover-color: #4aa581;
+$main-dark-color: #484848;
+$main-assent-primary-color: #1fc0fc;
+$main-assent-secondary-color: #ffc341;
+$main-gradient: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
 
 /* Other colors */
 $light-gray-color: #d7d9df;

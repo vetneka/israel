@@ -1,0 +1,14 @@
+.quaternary-head {
+  margin: 0;
+
+  font-family: $head-primary-font-family;
+  font-size: $quaternary-head-size;
+  line-height: 1.19;
+  font-weight: 800;
+  color: $main-assent-primary-color;
+
+  &--medium {
+    font-size: $quaternary-head-medium-size;
+    line-height: 1.167;
+  }
+}

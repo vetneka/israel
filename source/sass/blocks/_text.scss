@@ -1,0 +1,19 @@
+.text {
+  &--small {
+    font-size: $small-font-size;
+    line-height: 1.5;
+  }
+
+  &--big {
+    font-size: $big-font-size;
+  }
+
+  &--promo {
+    font-size: $promo-font-size;
+    line-height: 1.208;
+  }
+
+  &--small-line-height {
+    line-height: 1.5;
+  }
+}

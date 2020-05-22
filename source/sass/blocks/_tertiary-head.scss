@@ -1,0 +1,15 @@
+.tertiary-head {
+  margin: 0;
+
+  font-family: $head-secondary-font-family;
+  font-size: $tertiary-head-size;
+  line-height: 1.214;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $main-assent-primary-color;
+
+  &--medium {
+    font-size: $tertiary-head-medium-size;
+    line-height: 1.208;
+  }
+}

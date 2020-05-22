@@ -5,7 +5,7 @@
   padding: 15px 20px;
   border: 0;
   border-radius: 20px;
-  background-color: $main-accent-color;
+  // background-color: $main-accent-color;
 
   font-size: 2rem;
   font-weight: 600;
@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-color: $main-accent-hover-color;
+    // background-color: $main-accent-hover-color;
   }
 
   &:active {
@@ -28,11 +28,11 @@
   }
 
   &--play-mode {
-    background-color: $main-play-color;
+    // background-color: $main-play-color;
 
     &:hover,
     &:focus {
-      background-color: $main-play-hover-color;
+      // background-color: $main-play-hover-color;
     }
   }
 

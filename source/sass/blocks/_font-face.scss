@@ -1,22 +1,68 @@
-/* Roboto */
+/* FiraSans */
 /* Regular */
 @font-face {
-  font-family: "Roboto";
+  font-family: "FiraSans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:
-    url("../assets/fonts/Roboto/roboto-regular.woff2") format("woff2"),
-    url("../assets/fonts/Roboto/roboto-regular.woff") format("woff");
+    url("../assets/fonts/FiraSans/firasans-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/FiraSans/firasans-regular-webfont.woff") format("woff");
 }
 
 /* Medium */
 @font-face {
-  font-family: "Roboto";
+  font-family: "FiraSans";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src:
-    url("../assets/fonts/Roboto/roboto-medium.woff2") format("woff2"),
-    url("../assets/fonts/Roboto/roboto-medium.woff") format("woff");
+    url("../assets/fonts/FiraSans/firasans-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts/FiraSans/firasans-medium-webfont.woff") format("woff");
+}
+
+/* Bold */
+@font-face {
+  font-family: "FiraSans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../assets/fonts/FiraSans/firasans-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/FiraSans/firasans-bold-webfont.woff") format("woff");
+}
+
+/* Montserrat */
+/* Bold */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Montserrat/montserrat-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/Montserrat/montserrat-bold-webfont.woff") format("woff");
+}
+
+/* Raleway */
+/* Extra-Bold */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Raleway/raleway-extrabold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/Raleway/raleway-extrabold-webfont.woff") format("woff");
+}
+
+/* Black */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Raleway/raleway-black-webfont.woff2") format("woff2"),
+    url("../assets/fonts/Raleway/raleway-black-webfont.woff") format("woff");
 }

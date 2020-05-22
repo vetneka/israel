@@ -1,0 +1,16 @@
+.secondary-head {
+  margin: 0;
+
+  font-family: $head-secondary-font-family;
+  font-size: $secondary-head-size;
+  line-height: 1.225;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $main-assent-primary-color;
+
+  &--medium {
+    font-size: $secondary-head-medium-size;
+    line-height: 1.3;
+  }
+}

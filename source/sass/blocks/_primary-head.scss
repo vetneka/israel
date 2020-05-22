@@ -1,0 +1,16 @@
+.primary-head {
+  margin: 0;
+
+  font-family: $head-primary-font-family;
+  font-size: $primary-head-size;
+  font-weight: 900;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: $main-assent-primary-color;
+
+  &--medium {
+    font-size: $primary-head-medium-size;
+    letter-spacing: 0.005em;
+    font-weight: 800;
+  }
+}

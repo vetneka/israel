@@ -1,7 +1,8 @@
+// Abstracts
 @import "variables";
 @import "mixins";
 
-//
+// Global
 @import "blocks/global";
 @import "blocks/font-face";
 @import "blocks/visually-hidden";
@@ -9,6 +10,11 @@
 
 // Blocks
 @import "blocks/button";
+@import "blocks/primary-head";
+@import "blocks/secondary-head";
+@import "blocks/tertiary-head";
+@import "blocks/quaternary-head";
+@import "blocks/text";
 
 // Layout
 @import "blocks/page";
