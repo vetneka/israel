@@ -12,3 +12,10 @@
     line-height: 1.167;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .quaternary-head {
+    font-size: $quaternary-head-medium-size;
+    line-height: 1.167;
+  }
+}

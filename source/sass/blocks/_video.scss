@@ -1,0 +1,99 @@
+.video {
+  position: relative;
+
+  // Defines height hero
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 52.8%;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.video__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  background-color: $main-background-color;
+
+  box-shadow: 0 0 0 16px rgba($white, 0.32);
+  outline: none;
+
+  // triangle
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 2px);
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 15px;
+    border-color: transparent transparent transparent $main-assent-primary-color;
+
+    @include transition(opacity);
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    box-shadow:
+      0 1px 4px rgba($black, 0.05),
+      0 0 0 16px rgba($white, 0.32);
+
+    // triangle
+    &::before {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    background-color: #f4f4f4;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .video__button {
+    top: calc(50% + 9px);
+
+    width: 53px;
+    height: 53px;
+
+    box-shadow: 0 0 0 13px rgba($white, 0.32);
+
+    // triangle
+    &::before {
+      border-width: 8px 0 8px 12px;
+    }
+
+    &:hover {
+      box-shadow:
+        0 1px 4px rgba($black, 0.05),
+        0 0 0 13px rgba($white, 0.32);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.about {
+  padding-top: 10px;
+  padding-bottom: 96px;
+  overflow: hidden;
+
+  background: url("../assets/img/bg/bg-water-color-1.png") no-repeat right 22px bottom -8px / 97%;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image: url("../assets/img/bg/bg-water-color-1@2x.png");
+  }
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 23px;
+}
+
+.about__description {
+  max-width: 60%;
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-size: 17px;
+}
+
+.about__video {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: $mobile-width) {
+  .about {
+    padding-top: 30px;
+
+    background-position: right -44px bottom 50%;
+    background-size: 126%;
+  }
+
+  .about__title {
+    margin-bottom: 24px;
+  }
+
+  .about__description {
+    max-width: 100%;
+
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .about__video {
+    max-width: initial;
+    width: calc(100% + 136px);
+    transform: translateX(-68px);
+  }
+}

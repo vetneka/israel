@@ -1,5 +1,11 @@
 .container {
   max-width: $container-width-desktop;
-  padding: 0 $container_horizontal_offset;
+  padding: 0 $container-horizontal-offset;
   margin: 0 auto;
+}
+
+@media (max-width: $mobile-width) {
+  .container {
+    padding: 0 $container-horizontal-offset-mobile;
+  }
 }

@@ -8,8 +8,10 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: $main-assent-primary-color;
+}
 
-  &--medium {
+@media (max-width: $mobile-width) {
+  .secondary-head {
     font-size: $secondary-head-medium-size;
     line-height: 1.3;
   }

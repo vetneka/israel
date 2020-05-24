@@ -13,3 +13,10 @@
     line-height: 1.208;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .tertiary-head {
+    font-size: $tertiary-head-medium-size;
+    line-height: 1.208;
+  }
+}
