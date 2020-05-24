@@ -1,0 +1,15 @@
+.main-logo {
+  width: 137px;
+  height: 48px;
+}
+
+.main-logo__link {
+  display: block;
+}
+
+@media (max-width: $mobile-width) {
+  .main-logo {
+    width: 120px;
+    height: 42px;
+  }
+}

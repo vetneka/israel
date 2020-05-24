@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +13,39 @@
   <header class="main-header page__main-header">
     <div class="container">
       <div class="main-header__inner">
-        <h1 class="primary-head">primary-head</h1>
-        <h1 class="primary-head primary-head--medium">primary-head--medium</h1>
+        <a class="main-header__link main-header__link--phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
 
-        <h2 class="secondary-head">secondary-head</h2>
-        <h2 class="secondary-head secondary-head--medium">secondary-head--medium</h2>
+        <div class="main-logo main-header__main-logo">
+          <a class="main-logo__link">
+            <picture>
+              <!-- <source srcset="assets/img/img-logo.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp"> -->
+              <!-- 1х: 137px; 2x: 274px -->
+              <img src="assets/img/img-logo.png" width="137" height="48"
+                    srcset="assets/img/img-logo.png 2x"
+                    alt="Masavod">
+            </picture>
+          </a>
+        </div>
 
-        <h3 class="tertiary-head">tertiary-head</h3>
-        <h3 class="tertiary-head tertiary-head--medium">tertiary-head--medium</h3>
-
-        <h4 class="quaternary-head">quaternary-head</h4>
-        <h4 class="quaternary-head quaternary-head--medium">quaternary-head--medium</h4>
-        <p>Hello</p>
+        <a class="main-header__link main-header__link--call" data-modal="call" href="#">заказать звонок</a>
       </div>
     </div>
   </header>
 
   <main class="main page__main">
+    <section class="hero main__hero">
+      <div class="hero__inner">
+        <h1 class="primary-head hero__title">Израиль</h1>
 
+        <p class="text text--promo hero__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
+
+        <div class="scroll-down hero__scroll-down">
+          <svg class="scroll-down__icon" width="76" height="131">
+            <use xlink:href="assets/img/svg-sprite.svg#icon-scroll-down"/>
+          </svg>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="main-footer page__main-footer">

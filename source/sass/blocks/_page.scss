@@ -5,13 +5,24 @@
 }
 
 .page__main-header {
+  position: relative;
   flex-shrink: 0;
+
+  z-index: 10;
 }
 
 .page__main {
+  margin-top: -118px;
   flex-grow: 1;
 }
 
 .page__main-footer {
   flex-shrink: 0;
 }
+
+@media (max-width: $mobile-width) {
+  .page__main {
+    margin-top: -84px;
+  }
+}
+
