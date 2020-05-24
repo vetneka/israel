@@ -51,7 +51,47 @@
   <footer class="main-footer page__main-footer">
     <div class="container">
       <div class="main-footer__inner">
+        <div class="main-logo main-footer__main-logo">
+          <a class="main-logo__link">
+            <picture>
+              <!-- <source srcset="assets/img/img-logo-gray.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp"> -->
+              <!-- 1х: 85px; 2x: 170px -->
+              <img src="assets/img/img-logo-gray.png" width="131" height="48"
+                    srcset="assets/img/img-logo-gray.png 2x"
+                    alt="Masavod">
+            </picture>
+          </a>
+        </div>
 
+        <p class="main-footer__copyright">Copyright someDesignCompany ©2019</p>
+
+        <div class="social main-footer__social">
+          <ul class="social__list">
+            <li>
+              <a class="social__link" href="#" alt="Мы в Фейсбуке">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="assets/img/svg-sprite.svg#icon-facebook"/>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="social__link" href="#" alt="Мы в Твиттере">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="assets/img/svg-sprite.svg#icon-twitter"/>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="social__link" href="#" alt="Мы в Инстаграмме">
+                <svg class="social__icon" width="24" height="24">
+                  <use xlink:href="assets/img/svg-sprite.svg#icon-instagram"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>

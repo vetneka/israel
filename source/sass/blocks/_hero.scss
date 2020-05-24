@@ -7,9 +7,9 @@
 
   background: url("../assets/img/bg/bg-hero.png") no-repeat center / contain;
 
-  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
-    background-image: url("../assets/img/bg/bg-hero@2x.png");
-  }
+  // @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+  //   background-image: url("../assets/img/bg/bg-hero@2x.png");
+  // }
 
   // Defines height hero
   &::before {
@@ -86,7 +86,7 @@
     -webkit-background-clip: text;
 
     @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
-      background-image: url("../assets/img/bg/bg-overlay-hero-head@2.jpg");
+      background-image: url("../assets/img/bg/bg-overlay-hero-head@2x.jpg");
     }
   }
 }
