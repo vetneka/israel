@@ -38,7 +38,9 @@ $main-background-color: #ffffff;
 $main-dark-color: #484848;
 $main-assent-primary-color: #1fc0fc;
 $main-assent-secondary-color: #ffc341;
+
 $main-gradient: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+$secondary-gradient: linear-gradient($main-background-color, $main-background-color);
 
 /* Other colors */
 $light-gray-color: #d7d9df;
@@ -47,13 +49,16 @@ $footer-text-color: #14151780;
 $footer-item-title-color: #141517;
 $overlay-color: #14151799;
 
-$head-text-color: #2c2e3f;
-$head-background-color: #8dafdb;
+
+$button-hover-gradient: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+$button-active-gradient: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
 
 $tabs-link-color: #2c2e3f4d;
 
 $white: #ffffff;
 $black: #000000;
+$gray: #e3e3e3;
+$error: #ff0000;
 
 /* Viewports */
 $desktop-width: 1024px;

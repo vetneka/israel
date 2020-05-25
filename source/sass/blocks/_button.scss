@@ -2,17 +2,19 @@
   display: inline-flex;
   justify-content: center;
 
-  padding: 15px 20px;
+  padding: 18px 67px 17px;
   border: 0;
-  border-radius: 20px;
-  // background-color: $main-accent-color;
+  border-radius: 80px;
+  background-image: $main-gradient;
 
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: $main-background-color;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.176;
+  text-align: center;
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  color: $inverse-font-color;
 
-  box-shadow: 1px 2px 3px 0 rgba($black, 0.5);
   outline: none;
   cursor: pointer;
 
@@ -20,11 +22,11 @@
 
   &:hover,
   &:focus {
-    // background-color: $main-accent-hover-color;
+    background-image: $button-hover-gradient;
   }
 
   &:active {
-    box-shadow: none;
+    background-image: $button-active-gradient;
   }
 
   &--play-mode {

@@ -1,0 +1,131 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  input:not([type="checkbox"]):not([type="radio"]) {
+    width: 94%;
+    padding: 14px 40px 13px;
+    border: 2px solid $gray;
+    border-radius: 80px;
+
+    font-size: 17px;
+    outline: none;
+
+    &:focus {
+      border-color: $main-assent-secondary-color;
+    }
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 70%;
+
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba($base-font-color, 0.74);
+
+    cursor: pointer;
+
+    // checkbox frame
+    &::before {
+      content: "";
+      position: relative;
+      left: 3px;
+
+      display: inline-block;
+      vertical-align: top;
+      flex-shrink: 0;
+
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      margin-right: 10px;
+      border-radius: 2px;
+
+      background-image: $secondary-gradient, $main-gradient;
+      background-origin: content-box, border-box;
+      background-repeat: no-repeat;
+    }
+
+    // checkbox check
+    &::after {
+      display: none;
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 5px;
+
+      width: 16px;
+      height: 16px;
+      background-image: url("../assets/img/icons/svg/icon-checkbox-check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+
+input[type="checkbox"]:checked + label {
+  // checkbox check
+  &::after {
+    display: block;
+  }
+}
+
+.form__field {
+  margin-bottom: 8px;
+
+  &--checkbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  &--submit {
+    margin-top: 16px;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  &--invalid {
+    input:not([type="checkbox"]):not([type="radio"]) {
+      border-color: rgba($error, 0.5);
+    }
+
+    .form__error {
+      display: inline-block;
+    }
+  }
+
+  &--valid {
+    input:not([type="checkbox"]):not([type="radio"]) {
+      border-color: $main-dark-color;
+    }
+  }
+}
+
+.form__error {
+  display: none;
+  vertical-align: top;
+  padding: 10px 20px;
+  color: $error;
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    input:not([type="checkbox"]):not([type="radio"]) {
+      width: 100%;
+    }
+
+    input[type="checkbox"] + label {
+      max-width: 83%;
+
+      text-align: left;
+    }
+  }
+}
