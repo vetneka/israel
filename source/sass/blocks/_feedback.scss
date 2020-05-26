@@ -1,0 +1,87 @@
+.feedback {
+  padding: 164px 0 170px;
+
+  background:
+    url("../assets/img/bg/bg-backpac.png") no-repeat left -62px bottom 69% / 16%,
+    url("../assets/img/bg/bg-girl-with-flag.png") no-repeat right 8px bottom 48px / 59% auto;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image:
+      url("../assets/img/bg/bg-backpack@2x.png"),
+      url("../assets/img/bg/bg-girl-with-flag@2x.png");
+  }
+}
+
+.feedback__inner {
+  max-width: 51%;
+  padding-left: 103px;
+}
+
+.feedback__title {
+  margin-bottom: 22px;
+}
+
+.feedback__description {
+  padding-right: 50px;
+  margin: 0;
+  margin-bottom: 66px;
+
+  font-size: 17px;
+}
+
+.feedback__form {
+  position: relative;
+  width: 477px;
+
+  input:not([type="checkbox"]):not([type="radio"]) {
+    width: 100%;
+    padding-right: 50%;
+  }
+}
+
+.feedback__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 43px;
+  padding-right: 40px;
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    padding: 30px 0 340px;
+
+    background-position:
+      left -73px top -18px,
+      right 50% bottom 33px;
+
+    background-size:
+      180px auto,
+      422px auto;
+  }
+
+  .feedback__inner {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .feedback__title {
+    text-align: center;
+  }
+
+  .feedback__description {
+    padding-right: 0;
+    margin-bottom: 21px;
+    font-size: 16px;
+  }
+
+  .feedback__form {
+    width: 100%;
+  }
+
+  .feedback__button {
+    position: static;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}

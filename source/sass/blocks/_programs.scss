@@ -1,9 +1,9 @@
 .programs {
   padding-top: 112px;
-  padding-bottom: 112px;
+  padding-bottom: 70px;
   overflow: hidden;
 
-  background: url("../assets/img/bg/bg-sketch-1.png") no-repeat right 16px top 62px / 49% auto;
+  background: url("../assets/img/bg/bg-sketch-1.png") no-repeat right 10px top 63px / 49% auto;
 
   @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
     background-image: url("../assets/img/bg/bg-sketch-1@2x.png");
@@ -21,6 +21,7 @@
 @media (max-width: $mobile-width) {
   .programs {
     padding-top: 46px;
+    padding-bottom: 30px;
 
     background-position: right -23px top 165px;
     background-size: contain;
