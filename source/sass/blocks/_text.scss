@@ -16,4 +16,30 @@
   &--small-line-height {
     line-height: 1.5;
   }
+
+  &--footnote {
+    position: relative;
+    padding-left: 16px;
+
+    border-left: 4px solid $main-assent-secondary-color;
+
+    color: rgba($base-font-color, 0.5);
+  }
+
+  &--medium {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .text {
+    &--medium {
+      font-size: 16px;
+    }
+
+    &--footnote {
+      font-size: 14px;
+    }
+  }
 }

@@ -1,0 +1,86 @@
+.instruction {
+  padding: 145px 0 170px;
+
+  background:
+    url("../assets/img/bg/bg-stamp.png") no-repeat right -99px top 44%/333px,
+    url("../assets/img/bg/bg-couple-people.png") no-repeat left 22px bottom 163px/42% auto;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image:
+      url("../assets/img/bg/bg-stamp@2x.png"),
+      url("../assets/img/bg/bg-couple-people@2x.png");
+  }
+
+  color: rgba($base-font-color, 0.87);
+
+  p {
+    margin-top: 0;
+    margin-bottom: 36px;
+
+    &.text--medium {
+      color: rgba($base-font-color, 1);
+    }
+  }
+}
+
+.instruction__inner {
+  max-width: 49%;
+  margin-left: auto;
+}
+
+.instruction__content {
+  padding-right: 65px;
+}
+
+.instruction__title {
+  margin-bottom: 22px;
+}
+
+.instruction__steps {
+  margin-top: -7px;
+  margin-left: -10px;
+  margin-bottom: 44px;
+}
+
+@media (max-width: $mobile-width) {
+  .instruction {
+    padding: 50px 0 60px;
+
+    background: url("../assets/img/bg/bg-stamp.png") no-repeat right -47px top 49% / 260px;
+
+    @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+      background-image: url("../assets/img/bg/bg-stamp@2x.png");
+    }
+
+    p {
+      margin-bottom: 19px;
+
+      &.text--footnote {
+        padding-left: 10px;
+        margin-left: -4px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .instruction__inner {
+    max-width: 100%;
+  }
+
+  .instruction__content {
+    padding-right: 0;
+    font-size: 14px;
+  }
+
+  .instruction__title {
+    margin-bottom: 19px;
+    text-align: center;
+  }
+
+  .instruction__steps {
+    margin-top: -12px;
+    margin-bottom: 22px;
+
+    font-size: 14px;
+  }
+}
