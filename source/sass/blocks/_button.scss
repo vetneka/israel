@@ -1,11 +1,11 @@
 .button {
   display: inline-flex;
   justify-content: center;
+  align-items: center;
 
   padding: 18px 67px 17px;
   border: 0;
   border-radius: 80px;
-  background-image: $main-gradient;
 
   font-size: 21px;
   font-weight: 500;
@@ -13,32 +13,168 @@
   text-align: center;
   text-transform: lowercase;
   font-variant: all-small-caps;
-  color: $inverse-font-color;
+  color: $base-font-color;
+  text-decoration: none;
 
   outline: none;
   cursor: pointer;
 
-  @include transition(all);
+  @include transition(background);
 
-  &:hover,
-  &:focus {
-    background-image: $button-hover-gradient;
-  }
-
-  &:active {
-    background-image: $button-active-gradient;
-  }
-
-  &--play-mode {
-    // background-color: $main-play-color;
+  &--colored {
+    color: $inverse-font-color;
+    background-image: $main-gradient;
 
     &:hover,
     &:focus {
-      // background-color: $main-play-hover-color;
+      background-image: $button-hover-gradient;
+    }
+
+    &:active {
+      background-image: $button-active-gradient;
     }
   }
 
-  &--hidden {
-    display: none;
+  &--colored.button--icon {
+    &-general {
+      &::before {
+        @include sprite($icon-general-white);
+        @include retina-sprite($icon-general-white-group);
+      }
+    }
+
+    &-academic {
+      &::before {
+        @include sprite($icon-academic-white);
+        @include retina-sprite($icon-academic-white-group);
+      }
+    }
+
+    &-interships {
+      &::before {
+        @include sprite($icon-interships-white);
+        @include retina-sprite($icon-interships-white-group);
+      }
+    }
+
+    &-volunteerism {
+      &::before {
+        @include sprite($icon-volunteerism-white);
+        @include retina-sprite($icon-volunteerism-white-group);
+      }
+    }
+
+    &-religious {
+      &::before {
+        @include sprite($icon-religious-white);
+        @include retina-sprite($icon-religious-white-group);
+      }
+    }
+  }
+
+  &--icon {
+    &:hover {
+      // Icon black
+      &::before {
+        opacity: 0;
+      }
+
+      // Icon gradient
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    // Icon
+    &::before,
+    &::after {
+      content: "";
+      margin-right: 10px;
+      opacity: 1;
+
+      @include transition(opacity);
+    }
+
+    // Icon black
+    &::before {
+      opacity: 1;
+    }
+
+    // Icon gradient
+    &::after {
+      position: absolute;
+      left: 20px;
+      opacity: 0;
+    }
+
+    &-general {
+      &::before {
+        @include sprite($icon-general-black);
+        @include retina-sprite($icon-general-black-group);
+      }
+
+      &:hover {
+        &::after {
+          @include sprite($icon-general-gradient);
+          @include retina-sprite($icon-general-gradient-group);
+        }
+      }
+    }
+
+    &-academic {
+      &::before {
+        @include sprite($icon-academic-black);
+        @include retina-sprite($icon-academic-black-group);
+      }
+
+      &:hover {
+        &::after {
+          @include sprite($icon-academic-gradient);
+          @include retina-sprite($icon-academic-gradient-group);
+        }
+      }
+    }
+
+    &-interships {
+      &::before {
+        @include sprite($icon-interships-black);
+        @include retina-sprite($icon-interships-black-group);
+      }
+
+      &:hover {
+        &::after {
+          @include sprite($icon-interships-gradient);
+          @include retina-sprite($icon-interships-gradient-group);
+        }
+      }
+    }
+
+    &-volunteerism {
+      &::before {
+        @include sprite($icon-volunteerism-black);
+        @include retina-sprite($icon-volunteerism-black-group);
+      }
+
+      &:hover {
+        &::after {
+          @include sprite($icon-volunteerism-gradient);
+          @include retina-sprite($icon-volunteerism-gradient-group);
+        }
+      }
+    }
+
+    &-religious {
+      &::before {
+        @include sprite($icon-religious-black);
+        @include retina-sprite($icon-religious-black-group);
+      }
+
+      &:hover {
+        &::after {
+          @include sprite($icon-religious-gradient);
+          @include retina-sprite($icon-religious-gradient-group);
+        }
+      }
+    }
   }
 }

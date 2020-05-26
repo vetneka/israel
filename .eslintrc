@@ -5,4 +5,4 @@ env:
   node : true
 
 extends:
-  "htmlacademy/es5"
+  // "htmlacademy/es5"

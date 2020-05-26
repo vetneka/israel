@@ -20,6 +20,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",

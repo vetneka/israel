@@ -98,7 +98,6 @@
 
 @media (max-width: $mobile-width) {
   .modal {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
 
@@ -115,6 +114,10 @@
       .modal__description {
         max-width: 100%;
       }
+    }
+
+    &--show {
+      display: flex;
     }
   }
 }

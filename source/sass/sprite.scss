@@ -1,0 +1,538 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-academic-black-name: 'icon-academic-black';
+$icon-academic-black-x: 0px;
+$icon-academic-black-y: 0px;
+$icon-academic-black-offset-x: 0px;
+$icon-academic-black-offset-y: 0px;
+$icon-academic-black-width: 36px;
+$icon-academic-black-height: 35px;
+$icon-academic-black-total-width: 166px;
+$icon-academic-black-total-height: 158px;
+$icon-academic-black-image: '../assets/img/sprite.png';
+$icon-academic-black: (0px, 0px, 0px, 0px, 36px, 35px, 166px, 158px, '../assets/img/sprite.png', 'icon-academic-black', );
+$icon-academic-gradient-name: 'icon-academic-gradient';
+$icon-academic-gradient-x: 46px;
+$icon-academic-gradient-y: 0px;
+$icon-academic-gradient-offset-x: -46px;
+$icon-academic-gradient-offset-y: 0px;
+$icon-academic-gradient-width: 36px;
+$icon-academic-gradient-height: 35px;
+$icon-academic-gradient-total-width: 166px;
+$icon-academic-gradient-total-height: 158px;
+$icon-academic-gradient-image: '../assets/img/sprite.png';
+$icon-academic-gradient: (46px, 0px, -46px, 0px, 36px, 35px, 166px, 158px, '../assets/img/sprite.png', 'icon-academic-gradient', );
+$icon-academic-white-name: 'icon-academic-white';
+$icon-academic-white-x: 0px;
+$icon-academic-white-y: 45px;
+$icon-academic-white-offset-x: 0px;
+$icon-academic-white-offset-y: -45px;
+$icon-academic-white-width: 36px;
+$icon-academic-white-height: 35px;
+$icon-academic-white-total-width: 166px;
+$icon-academic-white-total-height: 158px;
+$icon-academic-white-image: '../assets/img/sprite.png';
+$icon-academic-white: (0px, 45px, 0px, -45px, 36px, 35px, 166px, 158px, '../assets/img/sprite.png', 'icon-academic-white', );
+$icon-general-black-name: 'icon-general-black';
+$icon-general-black-x: 0px;
+$icon-general-black-y: 90px;
+$icon-general-black-offset-x: 0px;
+$icon-general-black-offset-y: -90px;
+$icon-general-black-width: 28px;
+$icon-general-black-height: 33px;
+$icon-general-black-total-width: 166px;
+$icon-general-black-total-height: 158px;
+$icon-general-black-image: '../assets/img/sprite.png';
+$icon-general-black: (0px, 90px, 0px, -90px, 28px, 33px, 166px, 158px, '../assets/img/sprite.png', 'icon-general-black', );
+$icon-general-gradient-name: 'icon-general-gradient';
+$icon-general-gradient-x: 38px;
+$icon-general-gradient-y: 90px;
+$icon-general-gradient-offset-x: -38px;
+$icon-general-gradient-offset-y: -90px;
+$icon-general-gradient-width: 28px;
+$icon-general-gradient-height: 33px;
+$icon-general-gradient-total-width: 166px;
+$icon-general-gradient-total-height: 158px;
+$icon-general-gradient-image: '../assets/img/sprite.png';
+$icon-general-gradient: (38px, 90px, -38px, -90px, 28px, 33px, 166px, 158px, '../assets/img/sprite.png', 'icon-general-gradient', );
+$icon-general-white-name: 'icon-general-white';
+$icon-general-white-x: 76px;
+$icon-general-white-y: 90px;
+$icon-general-white-offset-x: -76px;
+$icon-general-white-offset-y: -90px;
+$icon-general-white-width: 28px;
+$icon-general-white-height: 33px;
+$icon-general-white-total-width: 166px;
+$icon-general-white-total-height: 158px;
+$icon-general-white-image: '../assets/img/sprite.png';
+$icon-general-white: (76px, 90px, -76px, -90px, 28px, 33px, 166px, 158px, '../assets/img/sprite.png', 'icon-general-white', );
+$icon-gps-name: 'icon-gps';
+$icon-gps-x: 134px;
+$icon-gps-y: 105px;
+$icon-gps-offset-x: -134px;
+$icon-gps-offset-y: -105px;
+$icon-gps-width: 16px;
+$icon-gps-height: 15px;
+$icon-gps-total-width: 166px;
+$icon-gps-total-height: 158px;
+$icon-gps-image: '../assets/img/sprite.png';
+$icon-gps: (134px, 105px, -134px, -105px, 16px, 15px, 166px, 158px, '../assets/img/sprite.png', 'icon-gps', );
+$icon-interships-black-name: 'icon-interships-black';
+$icon-interships-black-x: 134px;
+$icon-interships-black-y: 0px;
+$icon-interships-black-offset-x: -134px;
+$icon-interships-black-offset-y: 0px;
+$icon-interships-black-width: 32px;
+$icon-interships-black-height: 25px;
+$icon-interships-black-total-width: 166px;
+$icon-interships-black-total-height: 158px;
+$icon-interships-black-image: '../assets/img/sprite.png';
+$icon-interships-black: (134px, 0px, -134px, 0px, 32px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-interships-black', );
+$icon-interships-gradient-name: 'icon-interships-gradient';
+$icon-interships-gradient-x: 134px;
+$icon-interships-gradient-y: 35px;
+$icon-interships-gradient-offset-x: -134px;
+$icon-interships-gradient-offset-y: -35px;
+$icon-interships-gradient-width: 32px;
+$icon-interships-gradient-height: 25px;
+$icon-interships-gradient-total-width: 166px;
+$icon-interships-gradient-total-height: 158px;
+$icon-interships-gradient-image: '../assets/img/sprite.png';
+$icon-interships-gradient: (134px, 35px, -134px, -35px, 32px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-interships-gradient', );
+$icon-interships-white-name: 'icon-interships-white';
+$icon-interships-white-x: 134px;
+$icon-interships-white-y: 70px;
+$icon-interships-white-offset-x: -134px;
+$icon-interships-white-offset-y: -70px;
+$icon-interships-white-width: 32px;
+$icon-interships-white-height: 25px;
+$icon-interships-white-total-width: 166px;
+$icon-interships-white-total-height: 158px;
+$icon-interships-white-image: '../assets/img/sprite.png';
+$icon-interships-white: (134px, 70px, -134px, -70px, 32px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-interships-white', );
+$icon-marker-name: 'icon-marker';
+$icon-marker-x: 99px;
+$icon-marker-y: 133px;
+$icon-marker-offset-x: -99px;
+$icon-marker-offset-y: -133px;
+$icon-marker-width: 12px;
+$icon-marker-height: 18px;
+$icon-marker-total-width: 166px;
+$icon-marker-total-height: 158px;
+$icon-marker-image: '../assets/img/sprite.png';
+$icon-marker: (99px, 133px, -99px, -133px, 12px, 18px, 166px, 158px, '../assets/img/sprite.png', 'icon-marker', );
+$icon-religious-black-name: 'icon-religious-black';
+$icon-religious-black-x: 0px;
+$icon-religious-black-y: 133px;
+$icon-religious-black-offset-x: 0px;
+$icon-religious-black-offset-y: -133px;
+$icon-religious-black-width: 23px;
+$icon-religious-black-height: 25px;
+$icon-religious-black-total-width: 166px;
+$icon-religious-black-total-height: 158px;
+$icon-religious-black-image: '../assets/img/sprite.png';
+$icon-religious-black: (0px, 133px, 0px, -133px, 23px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-religious-black', );
+$icon-religious-gradient-name: 'icon-religious-gradient';
+$icon-religious-gradient-x: 33px;
+$icon-religious-gradient-y: 133px;
+$icon-religious-gradient-offset-x: -33px;
+$icon-religious-gradient-offset-y: -133px;
+$icon-religious-gradient-width: 23px;
+$icon-religious-gradient-height: 25px;
+$icon-religious-gradient-total-width: 166px;
+$icon-religious-gradient-total-height: 158px;
+$icon-religious-gradient-image: '../assets/img/sprite.png';
+$icon-religious-gradient: (33px, 133px, -33px, -133px, 23px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-religious-gradient', );
+$icon-religious-white-name: 'icon-religious-white';
+$icon-religious-white-x: 66px;
+$icon-religious-white-y: 133px;
+$icon-religious-white-offset-x: -66px;
+$icon-religious-white-offset-y: -133px;
+$icon-religious-white-width: 23px;
+$icon-religious-white-height: 25px;
+$icon-religious-white-total-width: 166px;
+$icon-religious-white-total-height: 158px;
+$icon-religious-white-image: '../assets/img/sprite.png';
+$icon-religious-white: (66px, 133px, -66px, -133px, 23px, 25px, 166px, 158px, '../assets/img/sprite.png', 'icon-religious-white', );
+$icon-volunteerism-black-name: 'icon-volunteerism-black';
+$icon-volunteerism-black-x: 46px;
+$icon-volunteerism-black-y: 45px;
+$icon-volunteerism-black-offset-x: -46px;
+$icon-volunteerism-black-offset-y: -45px;
+$icon-volunteerism-black-width: 32px;
+$icon-volunteerism-black-height: 29px;
+$icon-volunteerism-black-total-width: 166px;
+$icon-volunteerism-black-total-height: 158px;
+$icon-volunteerism-black-image: '../assets/img/sprite.png';
+$icon-volunteerism-black: (46px, 45px, -46px, -45px, 32px, 29px, 166px, 158px, '../assets/img/sprite.png', 'icon-volunteerism-black', );
+$icon-volunteerism-gradient-name: 'icon-volunteerism-gradient';
+$icon-volunteerism-gradient-x: 92px;
+$icon-volunteerism-gradient-y: 0px;
+$icon-volunteerism-gradient-offset-x: -92px;
+$icon-volunteerism-gradient-offset-y: 0px;
+$icon-volunteerism-gradient-width: 32px;
+$icon-volunteerism-gradient-height: 29px;
+$icon-volunteerism-gradient-total-width: 166px;
+$icon-volunteerism-gradient-total-height: 158px;
+$icon-volunteerism-gradient-image: '../assets/img/sprite.png';
+$icon-volunteerism-gradient: (92px, 0px, -92px, 0px, 32px, 29px, 166px, 158px, '../assets/img/sprite.png', 'icon-volunteerism-gradient', );
+$icon-volunteerism-white-name: 'icon-volunteerism-white';
+$icon-volunteerism-white-x: 92px;
+$icon-volunteerism-white-y: 39px;
+$icon-volunteerism-white-offset-x: -92px;
+$icon-volunteerism-white-offset-y: -39px;
+$icon-volunteerism-white-width: 32px;
+$icon-volunteerism-white-height: 29px;
+$icon-volunteerism-white-total-width: 166px;
+$icon-volunteerism-white-total-height: 158px;
+$icon-volunteerism-white-image: '../assets/img/sprite.png';
+$icon-volunteerism-white: (92px, 39px, -92px, -39px, 32px, 29px, 166px, 158px, '../assets/img/sprite.png', 'icon-volunteerism-white', );
+$icon-academic-black-2x-name: 'icon-academic-black@2x';
+$icon-academic-black-2x-x: 0px;
+$icon-academic-black-2x-y: 0px;
+$icon-academic-black-2x-offset-x: 0px;
+$icon-academic-black-2x-offset-y: 0px;
+$icon-academic-black-2x-width: 72px;
+$icon-academic-black-2x-height: 70px;
+$icon-academic-black-2x-total-width: 332px;
+$icon-academic-black-2x-total-height: 316px;
+$icon-academic-black-2x-image: '../assets/img/sprite@2x.png';
+$icon-academic-black-2x: (0px, 0px, 0px, 0px, 72px, 70px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-academic-black@2x', );
+$icon-academic-gradient-2x-name: 'icon-academic-gradient@2x';
+$icon-academic-gradient-2x-x: 92px;
+$icon-academic-gradient-2x-y: 0px;
+$icon-academic-gradient-2x-offset-x: -92px;
+$icon-academic-gradient-2x-offset-y: 0px;
+$icon-academic-gradient-2x-width: 72px;
+$icon-academic-gradient-2x-height: 70px;
+$icon-academic-gradient-2x-total-width: 332px;
+$icon-academic-gradient-2x-total-height: 316px;
+$icon-academic-gradient-2x-image: '../assets/img/sprite@2x.png';
+$icon-academic-gradient-2x: (92px, 0px, -92px, 0px, 72px, 70px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-academic-gradient@2x', );
+$icon-academic-white-2x-name: 'icon-academic-white@2x';
+$icon-academic-white-2x-x: 0px;
+$icon-academic-white-2x-y: 90px;
+$icon-academic-white-2x-offset-x: 0px;
+$icon-academic-white-2x-offset-y: -90px;
+$icon-academic-white-2x-width: 72px;
+$icon-academic-white-2x-height: 70px;
+$icon-academic-white-2x-total-width: 332px;
+$icon-academic-white-2x-total-height: 316px;
+$icon-academic-white-2x-image: '../assets/img/sprite@2x.png';
+$icon-academic-white-2x: (0px, 90px, 0px, -90px, 72px, 70px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-academic-white@2x', );
+$icon-general-black-2x-name: 'icon-general-black@2x';
+$icon-general-black-2x-x: 0px;
+$icon-general-black-2x-y: 180px;
+$icon-general-black-2x-offset-x: 0px;
+$icon-general-black-2x-offset-y: -180px;
+$icon-general-black-2x-width: 56px;
+$icon-general-black-2x-height: 66px;
+$icon-general-black-2x-total-width: 332px;
+$icon-general-black-2x-total-height: 316px;
+$icon-general-black-2x-image: '../assets/img/sprite@2x.png';
+$icon-general-black-2x: (0px, 180px, 0px, -180px, 56px, 66px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-general-black@2x', );
+$icon-general-gradient-2x-name: 'icon-general-gradient@2x';
+$icon-general-gradient-2x-x: 76px;
+$icon-general-gradient-2x-y: 180px;
+$icon-general-gradient-2x-offset-x: -76px;
+$icon-general-gradient-2x-offset-y: -180px;
+$icon-general-gradient-2x-width: 56px;
+$icon-general-gradient-2x-height: 66px;
+$icon-general-gradient-2x-total-width: 332px;
+$icon-general-gradient-2x-total-height: 316px;
+$icon-general-gradient-2x-image: '../assets/img/sprite@2x.png';
+$icon-general-gradient-2x: (76px, 180px, -76px, -180px, 56px, 66px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-general-gradient@2x', );
+$icon-general-white-2x-name: 'icon-general-white@2x';
+$icon-general-white-2x-x: 152px;
+$icon-general-white-2x-y: 180px;
+$icon-general-white-2x-offset-x: -152px;
+$icon-general-white-2x-offset-y: -180px;
+$icon-general-white-2x-width: 56px;
+$icon-general-white-2x-height: 66px;
+$icon-general-white-2x-total-width: 332px;
+$icon-general-white-2x-total-height: 316px;
+$icon-general-white-2x-image: '../assets/img/sprite@2x.png';
+$icon-general-white-2x: (152px, 180px, -152px, -180px, 56px, 66px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-general-white@2x', );
+$icon-gps-2x-name: 'icon-gps@2x';
+$icon-gps-2x-x: 268px;
+$icon-gps-2x-y: 210px;
+$icon-gps-2x-offset-x: -268px;
+$icon-gps-2x-offset-y: -210px;
+$icon-gps-2x-width: 32px;
+$icon-gps-2x-height: 30px;
+$icon-gps-2x-total-width: 332px;
+$icon-gps-2x-total-height: 316px;
+$icon-gps-2x-image: '../assets/img/sprite@2x.png';
+$icon-gps-2x: (268px, 210px, -268px, -210px, 32px, 30px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-gps@2x', );
+$icon-interships-black-2x-name: 'icon-interships-black@2x';
+$icon-interships-black-2x-x: 268px;
+$icon-interships-black-2x-y: 0px;
+$icon-interships-black-2x-offset-x: -268px;
+$icon-interships-black-2x-offset-y: 0px;
+$icon-interships-black-2x-width: 64px;
+$icon-interships-black-2x-height: 50px;
+$icon-interships-black-2x-total-width: 332px;
+$icon-interships-black-2x-total-height: 316px;
+$icon-interships-black-2x-image: '../assets/img/sprite@2x.png';
+$icon-interships-black-2x: (268px, 0px, -268px, 0px, 64px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-interships-black@2x', );
+$icon-interships-gradient-2x-name: 'icon-interships-gradient@2x';
+$icon-interships-gradient-2x-x: 268px;
+$icon-interships-gradient-2x-y: 70px;
+$icon-interships-gradient-2x-offset-x: -268px;
+$icon-interships-gradient-2x-offset-y: -70px;
+$icon-interships-gradient-2x-width: 64px;
+$icon-interships-gradient-2x-height: 50px;
+$icon-interships-gradient-2x-total-width: 332px;
+$icon-interships-gradient-2x-total-height: 316px;
+$icon-interships-gradient-2x-image: '../assets/img/sprite@2x.png';
+$icon-interships-gradient-2x: (268px, 70px, -268px, -70px, 64px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-interships-gradient@2x', );
+$icon-interships-white-2x-name: 'icon-interships-white@2x';
+$icon-interships-white-2x-x: 268px;
+$icon-interships-white-2x-y: 140px;
+$icon-interships-white-2x-offset-x: -268px;
+$icon-interships-white-2x-offset-y: -140px;
+$icon-interships-white-2x-width: 64px;
+$icon-interships-white-2x-height: 50px;
+$icon-interships-white-2x-total-width: 332px;
+$icon-interships-white-2x-total-height: 316px;
+$icon-interships-white-2x-image: '../assets/img/sprite@2x.png';
+$icon-interships-white-2x: (268px, 140px, -268px, -140px, 64px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-interships-white@2x', );
+$icon-marker-2x-name: 'icon-marker@2x';
+$icon-marker-2x-x: 198px;
+$icon-marker-2x-y: 266px;
+$icon-marker-2x-offset-x: -198px;
+$icon-marker-2x-offset-y: -266px;
+$icon-marker-2x-width: 24px;
+$icon-marker-2x-height: 36px;
+$icon-marker-2x-total-width: 332px;
+$icon-marker-2x-total-height: 316px;
+$icon-marker-2x-image: '../assets/img/sprite@2x.png';
+$icon-marker-2x: (198px, 266px, -198px, -266px, 24px, 36px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-marker@2x', );
+$icon-religious-black-2x-name: 'icon-religious-black@2x';
+$icon-religious-black-2x-x: 0px;
+$icon-religious-black-2x-y: 266px;
+$icon-religious-black-2x-offset-x: 0px;
+$icon-religious-black-2x-offset-y: -266px;
+$icon-religious-black-2x-width: 46px;
+$icon-religious-black-2x-height: 50px;
+$icon-religious-black-2x-total-width: 332px;
+$icon-religious-black-2x-total-height: 316px;
+$icon-religious-black-2x-image: '../assets/img/sprite@2x.png';
+$icon-religious-black-2x: (0px, 266px, 0px, -266px, 46px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-religious-black@2x', );
+$icon-religious-gradient-2x-name: 'icon-religious-gradient@2x';
+$icon-religious-gradient-2x-x: 66px;
+$icon-religious-gradient-2x-y: 266px;
+$icon-religious-gradient-2x-offset-x: -66px;
+$icon-religious-gradient-2x-offset-y: -266px;
+$icon-religious-gradient-2x-width: 46px;
+$icon-religious-gradient-2x-height: 50px;
+$icon-religious-gradient-2x-total-width: 332px;
+$icon-religious-gradient-2x-total-height: 316px;
+$icon-religious-gradient-2x-image: '../assets/img/sprite@2x.png';
+$icon-religious-gradient-2x: (66px, 266px, -66px, -266px, 46px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-religious-gradient@2x', );
+$icon-religious-white-2x-name: 'icon-religious-white@2x';
+$icon-religious-white-2x-x: 132px;
+$icon-religious-white-2x-y: 266px;
+$icon-religious-white-2x-offset-x: -132px;
+$icon-religious-white-2x-offset-y: -266px;
+$icon-religious-white-2x-width: 46px;
+$icon-religious-white-2x-height: 50px;
+$icon-religious-white-2x-total-width: 332px;
+$icon-religious-white-2x-total-height: 316px;
+$icon-religious-white-2x-image: '../assets/img/sprite@2x.png';
+$icon-religious-white-2x: (132px, 266px, -132px, -266px, 46px, 50px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-religious-white@2x', );
+$icon-volunteerism-black-2x-name: 'icon-volunteerism-black@2x';
+$icon-volunteerism-black-2x-x: 92px;
+$icon-volunteerism-black-2x-y: 90px;
+$icon-volunteerism-black-2x-offset-x: -92px;
+$icon-volunteerism-black-2x-offset-y: -90px;
+$icon-volunteerism-black-2x-width: 64px;
+$icon-volunteerism-black-2x-height: 58px;
+$icon-volunteerism-black-2x-total-width: 332px;
+$icon-volunteerism-black-2x-total-height: 316px;
+$icon-volunteerism-black-2x-image: '../assets/img/sprite@2x.png';
+$icon-volunteerism-black-2x: (92px, 90px, -92px, -90px, 64px, 58px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-volunteerism-black@2x', );
+$icon-volunteerism-gradient-2x-name: 'icon-volunteerism-gradient@2x';
+$icon-volunteerism-gradient-2x-x: 184px;
+$icon-volunteerism-gradient-2x-y: 0px;
+$icon-volunteerism-gradient-2x-offset-x: -184px;
+$icon-volunteerism-gradient-2x-offset-y: 0px;
+$icon-volunteerism-gradient-2x-width: 64px;
+$icon-volunteerism-gradient-2x-height: 58px;
+$icon-volunteerism-gradient-2x-total-width: 332px;
+$icon-volunteerism-gradient-2x-total-height: 316px;
+$icon-volunteerism-gradient-2x-image: '../assets/img/sprite@2x.png';
+$icon-volunteerism-gradient-2x: (184px, 0px, -184px, 0px, 64px, 58px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-volunteerism-gradient@2x', );
+$icon-volunteerism-white-2x-name: 'icon-volunteerism-white@2x';
+$icon-volunteerism-white-2x-x: 184px;
+$icon-volunteerism-white-2x-y: 78px;
+$icon-volunteerism-white-2x-offset-x: -184px;
+$icon-volunteerism-white-2x-offset-y: -78px;
+$icon-volunteerism-white-2x-width: 64px;
+$icon-volunteerism-white-2x-height: 58px;
+$icon-volunteerism-white-2x-total-width: 332px;
+$icon-volunteerism-white-2x-total-height: 316px;
+$icon-volunteerism-white-2x-image: '../assets/img/sprite@2x.png';
+$icon-volunteerism-white-2x: (184px, 78px, -184px, -78px, 64px, 58px, 332px, 316px, '../assets/img/sprite@2x.png', 'icon-volunteerism-white@2x', );
+$spritesheet-width: 166px;
+$spritesheet-height: 158px;
+$spritesheet-image: '../assets/img/sprite.png';
+$spritesheet-sprites: ($icon-academic-black, $icon-academic-gradient, $icon-academic-white, $icon-general-black, $icon-general-gradient, $icon-general-white, $icon-gps, $icon-interships-black, $icon-interships-gradient, $icon-interships-white, $icon-marker, $icon-religious-black, $icon-religious-gradient, $icon-religious-white, $icon-volunteerism-black, $icon-volunteerism-gradient, $icon-volunteerism-white, );
+$spritesheet: (166px, 158px, '../assets/img/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 332px;
+$retina-spritesheet-height: 316px;
+$retina-spritesheet-image: '../assets/img/sprite@2x.png';
+$retina-spritesheet-sprites: ($icon-academic-black-2x, $icon-academic-gradient-2x, $icon-academic-white-2x, $icon-general-black-2x, $icon-general-gradient-2x, $icon-general-white-2x, $icon-gps-2x, $icon-interships-black-2x, $icon-interships-gradient-2x, $icon-interships-white-2x, $icon-marker-2x, $icon-religious-black-2x, $icon-religious-gradient-2x, $icon-religious-white-2x, $icon-volunteerism-black-2x, $icon-volunteerism-gradient-2x, $icon-volunteerism-white-2x, );
+$retina-spritesheet: (332px, 316px, '../assets/img/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon-academic-black-group-name: 'icon-academic-black';
+$icon-academic-black-group: ('icon-academic-black', $icon-academic-black, $icon-academic-black-2x, );
+$icon-academic-gradient-group-name: 'icon-academic-gradient';
+$icon-academic-gradient-group: ('icon-academic-gradient', $icon-academic-gradient, $icon-academic-gradient-2x, );
+$icon-academic-white-group-name: 'icon-academic-white';
+$icon-academic-white-group: ('icon-academic-white', $icon-academic-white, $icon-academic-white-2x, );
+$icon-general-black-group-name: 'icon-general-black';
+$icon-general-black-group: ('icon-general-black', $icon-general-black, $icon-general-black-2x, );
+$icon-general-gradient-group-name: 'icon-general-gradient';
+$icon-general-gradient-group: ('icon-general-gradient', $icon-general-gradient, $icon-general-gradient-2x, );
+$icon-general-white-group-name: 'icon-general-white';
+$icon-general-white-group: ('icon-general-white', $icon-general-white, $icon-general-white-2x, );
+$icon-gps-group-name: 'icon-gps';
+$icon-gps-group: ('icon-gps', $icon-gps, $icon-gps-2x, );
+$icon-interships-black-group-name: 'icon-interships-black';
+$icon-interships-black-group: ('icon-interships-black', $icon-interships-black, $icon-interships-black-2x, );
+$icon-interships-gradient-group-name: 'icon-interships-gradient';
+$icon-interships-gradient-group: ('icon-interships-gradient', $icon-interships-gradient, $icon-interships-gradient-2x, );
+$icon-interships-white-group-name: 'icon-interships-white';
+$icon-interships-white-group: ('icon-interships-white', $icon-interships-white, $icon-interships-white-2x, );
+$icon-marker-group-name: 'icon-marker';
+$icon-marker-group: ('icon-marker', $icon-marker, $icon-marker-2x, );
+$icon-religious-black-group-name: 'icon-religious-black';
+$icon-religious-black-group: ('icon-religious-black', $icon-religious-black, $icon-religious-black-2x, );
+$icon-religious-gradient-group-name: 'icon-religious-gradient';
+$icon-religious-gradient-group: ('icon-religious-gradient', $icon-religious-gradient, $icon-religious-gradient-2x, );
+$icon-religious-white-group-name: 'icon-religious-white';
+$icon-religious-white-group: ('icon-religious-white', $icon-religious-white, $icon-religious-white-2x, );
+$icon-volunteerism-black-group-name: 'icon-volunteerism-black';
+$icon-volunteerism-black-group: ('icon-volunteerism-black', $icon-volunteerism-black, $icon-volunteerism-black-2x, );
+$icon-volunteerism-gradient-group-name: 'icon-volunteerism-gradient';
+$icon-volunteerism-gradient-group: ('icon-volunteerism-gradient', $icon-volunteerism-gradient, $icon-volunteerism-gradient-2x, );
+$icon-volunteerism-white-group-name: 'icon-volunteerism-white';
+$icon-volunteerism-white-group: ('icon-volunteerism-white', $icon-volunteerism-white, $icon-volunteerism-white-2x, );
+$retina-groups: ($icon-academic-black-group, $icon-academic-gradient-group, $icon-academic-white-group, $icon-general-black-group, $icon-general-gradient-group, $icon-general-white-group, $icon-gps-group, $icon-interships-black-group, $icon-interships-gradient-group, $icon-interships-white-group, $icon-marker-group, $icon-religious-black-group, $icon-religious-gradient-group, $icon-religious-white-group, $icon-volunteerism-black-group, $icon-volunteerism-gradient-group, $icon-volunteerism-white-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

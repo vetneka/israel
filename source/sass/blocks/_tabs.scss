@@ -1,0 +1,151 @@
+.tabs {
+  display: flex;
+}
+
+.tabs__list {
+  width: 228px;
+  margin: 0;
+  margin-right: 64px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tabs__item {
+  position: relative;
+  margin-bottom: 7px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Arrow-triangle to right
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 37px 0 34px 26px;
+    border-color: $main-background-color $main-background-color $main-background-color transparent;
+  }
+}
+
+.tabs__link {
+  position: relative;
+
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0;
+
+  font-size: $base-font-size;
+  font-weight: 400;
+  text-transform: initial;
+  font-variant: initial;
+
+  // Icon black
+  &::before {
+    margin-right: 21px;
+  }
+}
+
+.tabs__link.button--colored {
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  pointer-events: none;
+}
+
+.tabs__content {
+  width: 53%;
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+  list-style-type: none;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.tabs__content-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.tabs__content-title {
+  margin-bottom: 23px;
+}
+
+@media (max-width: $mobile-width) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs__list {
+    display: flex;
+    width: calc(100% + #{$container-horizontal-offset-mobile});
+    margin-right: 0;
+    margin-bottom: 14px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .tabs__item {
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // Arrow-triangle to right
+    &::after {
+      display: none;
+    }
+  }
+
+  .tabs__link {
+    padding: 7px 8px;
+    border-radius: 80px;
+    opacity: 0.4;
+
+    // Icon black
+    &::before {
+      margin-right: 7px;
+    }
+
+    // Icon gradient
+    &::after {
+      left: 8px;
+    }
+  }
+
+  .tabs__link.button--colored {
+    opacity: 1;
+  }
+
+  .tabs__content {
+    width: 100%;
+
+    p {
+      margin: 0;
+      margin-bottom: 17px;
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+  }
+
+  .tabs__content-title {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,37 @@
+.programs {
+  padding-top: 112px;
+  padding-bottom: 112px;
+  overflow: hidden;
+
+  background: url("../assets/img/bg/bg-sketch-1.png") no-repeat right 16px top 62px / 49% auto;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image: url("../assets/img/bg/bg-sketch-1@2x.png");
+  }
+}
+
+.programs__inner {
+  padding-left: 105px;
+}
+
+.programs__title {
+  margin-bottom: 65px;
+}
+
+@media (max-width: $mobile-width) {
+  .programs {
+    padding-top: 46px;
+
+    background-position: right -23px top 165px;
+    background-size: contain;
+  }
+
+  .programs__inner {
+    padding-left: 0;
+  }
+
+  .programs__title {
+    margin-bottom: 13px;
+    text-align: center;
+  }
+}
