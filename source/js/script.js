@@ -20,7 +20,37 @@ const handle = (evt) => {
   nextTabContent.classList.add('tabs__content-item--active');
 };
 
+const breakpoint = window.matchMedia('(min-width: 768px)');
+
+let mySwiper;
+
+const enableSwiper = function() {
+  mySwiper = new Swiper ('.swiper-container', {
+     slidesPerView: 1,
+     a11y: true,
+     grabCursor: true,
+     pagination: {
+      el: '.features__pagination',
+      type: 'bullets',
+      bulletClass: 'features__pagination-item',
+      bulletActiveClass: 'features__pagination-item--active',
+    },
+  });
+};
+
+const breakpointChecker = function() {
+  if ( breakpoint.matches === true ) {
+    if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+     return;
+  } else if ( breakpoint.matches === false ) {
+    return enableSwiper();
+  }
+};
+
 window.addEventListener('load', () => {
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+
   const tabContainer = document.querySelector('[data-tabs="programs"]');
   tabContainer.addEventListener('click', handle);
 });
