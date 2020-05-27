@@ -1,0 +1,69 @@
+.gallery {
+  padding: 170px 0 280px;
+
+  background: url("../assets/img/bg/bg-masaisrael.png") no-repeat left 12px top 48px/99%;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image: url("../assets/img/bg/bg-masaisrael@2x.png");
+  }
+}
+
+.gallery__inner {
+  max-width: 403px;
+  margin-left: auto;
+  margin-right: 60px;
+
+}
+
+.gallery__title {
+  margin-bottom: 25px;
+}
+
+.gallery__description {
+  margin: 0;
+  margin-bottom: 48px;
+
+  font-size: 17px;
+  color: $inverse-font-color;
+}
+
+.gallery__button {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .button__icon {
+    margin-right: 10px;
+    fill: $main-background-color;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .gallery {
+    padding: 22px 0 50px;
+
+    background-position: left 22% top 68px;
+    background-size: 196%;
+  }
+
+  .gallery__inner {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .gallery__title {
+    margin-bottom: 91px;
+    margin-left: -5px;
+    font-size: $secondary-head-size;
+  }
+
+  .gallery__description {
+    margin-bottom: 52px;
+    font-size: 16px;
+  }
+
+  .gallery__button {
+    width: calc(100% - 26px);
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+}
