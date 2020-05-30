@@ -1,0 +1,269 @@
+.details {
+  position: relative;
+  padding-top: 49px;
+  padding-bottom: 67px;
+}
+
+.details__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details__title {
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.details__left {
+  width: 42%;
+}
+
+.details__user-location {
+  display: flex;
+  align-items: center;
+
+  padding-left: 8px;
+  margin-bottom: 38px;
+
+  color: rgba($base-font-color, 0.74);
+}
+
+.details__user-location-head {
+  display: flex;
+  align-items: center;
+  margin-right: 17px;
+
+  // icon marker
+  &::before {
+    content: "";
+    width: 12px;
+    height: 18px;
+    margin-right: 5px;
+
+    @include sprite($icon-marker);
+    @include retina-sprite($icon-marker-group);
+  }
+}
+
+.details__user-location-city {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: rgba($base-font-color, 1);
+
+  // Icon jps
+  &::after {
+    content: "";
+    width: 16px;
+    height: 15px;
+    margin-left: 16px;
+
+    @include sprite($icon-gps);
+    @include retina-sprite($icon-gps-group);
+  }
+
+  // underline
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 30px;
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, currentColor, currentColor 2px, transparent 2px, transparent 6px, currentColor 6px, currentColor 8px);
+
+    @include transition(all);
+  }
+
+  &:hover {
+    &::before {
+      background-color: currentColor;
+    }
+  }
+}
+
+.details__curator {
+  .curator {
+    margin-bottom: 33px;
+  }
+}
+
+.details__curator-description {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 17px;
+}
+
+.details__map {
+  position: absolute;
+  right: 0;
+  top: 50px;
+
+  width: 51.4%;
+}
+
+.details__contacts {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+  margin-top: 122px;
+
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__field {
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    &--submit {
+      flex-shrink: 0;
+
+      width: 216px;
+      margin: 0;
+
+      .button {
+        width: 100%;
+        padding: 18px 20px 17px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.details__contacts-left {
+  width: 30%;
+  margin-right: 35px;
+
+  .text {
+    font-size: 13px;
+
+    &--medium {
+      font-size: 17px;
+    }
+  }
+}
+
+.details__contacts-right {
+  flex-grow: 1;
+
+  .form {
+    justify-content: flex-start;
+
+    .form__field {
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .details {
+    padding-top: 18px;
+    padding-bottom: 64px;
+    overflow: hidden;
+  }
+
+  .details__inner {
+    display: block;
+  }
+
+  .details__title {
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  .details__left {
+    width: auto;
+  }
+
+  .details__curator-description {
+    margin: 0;
+    margin-bottom: 33px;
+
+    font-size: 16px;
+  }
+
+  .details__map {
+    position: relative;
+    left: 50%;
+
+    width: auto;
+    min-width: 661px;
+    margin-bottom: 23px;
+
+    transform: translateX(-50%);
+  }
+
+  .details__contacts {
+    display: block;
+    margin-top: 0;
+
+    line-height: 1.5;
+  }
+
+  .details__contacts-left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 34px;
+
+    .text {
+      &--medium {
+        margin-bottom: 15px;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  .details__contacts-right {
+    width: 100%;
+
+    .form {
+      display: block;
+
+      .form__field {
+        margin-right: 0;
+        margin-bottom: 11px;
+
+        &--submit {
+          width: calc(100% - 24px);
+          margin: 26px 12px 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

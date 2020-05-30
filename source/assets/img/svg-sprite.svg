@@ -18,7 +18,7 @@
 <stop offset="0.963542" stop-color="#FFD701"/>
 </linearGradient>
 </defs><symbol id="icon-arrow-down" viewBox="0 0 17 11">
-<path d="M1 1L8.5 9L16 1" stroke="black" stroke-width="2"/>
+<path d="M1 1L8.5 9L16 1" stroke="#1fc0fc" stroke-width="2"/>
 </symbol><symbol id="icon-checkbox-check" viewBox="0 0 58 46">
 <path d="M5 25.88L19.1972 41L53 5" stroke="url(#paint0_linear)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
 

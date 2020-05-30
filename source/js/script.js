@@ -1,4 +1,4 @@
-const handle = (evt) => {
+const tabClickHandler = (evt) => {
   const { target } = evt;
 
   if (!target.closest('.button')) return;
@@ -38,6 +38,25 @@ const enableSwiper = function() {
   });
 };
 
+const enableReviewsSlider = function() {
+  const reviewSlider = new Swiper ('.reviews__inner', {
+    slidesPerView: 1,
+    a11y: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    pagination: {
+      el: '.reviews__pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.reviews__button--next',
+      prevEl: '.reviews__button--previous',
+    },
+  });
+};
+
 const breakpointChecker = function() {
   if ( breakpoint.matches === true ) {
     if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
@@ -47,10 +66,52 @@ const breakpointChecker = function() {
   }
 };
 
+const accordionClickHandler = function(evt) {
+  evt.preventDefault();
+
+  if (!evt.target.closest('.accordion__item') || evt.target.closest('.accordion__item--active')) return;
+
+  const accordion = evt.target.closest('[data-accordion="questions"]');
+  const currentItem = evt.target.closest('.accordion__item');
+  const previousItem = accordion.querySelector('.accordion__item--active');
+
+  previousItem.classList.remove('accordion__item--active');
+  currentItem.classList.add('accordion__item--active');
+};
+
+/* const sliderClickHandler = function (evt) {
+  if (!evt.target.closest('.reviews__navigation-button')) return;
+
+  const currentNavButton = evt.target.closest('.reviews__navigation-button');
+
+  const reviewsList = evt.target.closest('.reviews__list');
+  const count = reviewsList.querySelector('.reviews__navigation-count');
+
+  const currentActiveSlide = reviewsList.querySelector('.reviews__item--active');
+  currentActiveSlide.classList.remove('reviews__item--active');
+
+  if (currentNavButton.classList.contains('reviews__navigation-button--previous')) {
+    if (currentActiveSlide.previousElementSibling) {
+      currentActiveSlide.previousElementSibling.classList.add();
+    }
+  } else if (currentNavButton.classList.contains('reviews__navigation-button--next')) {
+
+  }
+
+}; */
+
 window.addEventListener('load', () => {
+  enableReviewsSlider();
+
   breakpoint.addListener(breakpointChecker);
   breakpointChecker();
 
   const tabContainer = document.querySelector('[data-tabs="programs"]');
-  tabContainer.addEventListener('click', handle);
+  tabContainer.addEventListener('click', tabClickHandler);
+
+  const accordionContainer = document.querySelector('[data-accordion="questions"]');
+  accordionContainer.addEventListener('click', accordionClickHandler);
+
+  // const slider = document.querySelector('.reviews__navigation');
+  // slider.addEventListener('click', sliderClickHandler);
 });

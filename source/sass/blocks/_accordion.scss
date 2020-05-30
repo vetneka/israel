@@ -1,0 +1,130 @@
+.accordion {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  counter-reset: question;
+}
+
+.accordion__item {
+  border-bottom: 1px solid rgba($main-dark-color, 0.2);
+
+  &--active {
+    .accordion__title {
+      // arrow drop-down
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .accordion__content {
+      height: auto;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.accordion__title {
+  position: relative;
+
+  display: flex;
+  padding: 35px 0 29px;
+
+  font-size: 17px;
+  text-decoration: none;
+  color: inherit;
+
+  // question number
+  &::before {
+    content: counter(question);
+    counter-increment: question;
+
+    margin-right: 16px;
+
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 700;
+    color: $main-assent-secondary-color;
+  }
+
+  // arrow drop-down
+  &::after {
+    content: "";
+    flex-shrink: 0;
+
+    width: 20px;
+    height: 12px;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-right: 50px;
+
+    transform: rotate(0);
+    background: url("../assets/img/icons/svg/icon-arrow-down.svg") no-repeat center / contain;
+
+    @include transition(transform);
+  }
+}
+
+.accordion__title-text {
+  margin-right: auto;
+}
+
+.accordion__content {
+  max-width: 85%;
+  height: 0;
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  opacity: 0.74;
+  overflow: hidden;
+
+  @include transition(all);
+}
+
+@media (max-width: $mobile-width) {
+  .accordion__item {
+    &--active {
+      .accordion__title {
+        padding-bottom: 18px;
+      }
+
+      .accordion__content {
+        margin-bottom: 14px;
+
+        line-height: 1.6;
+      }
+    }
+
+    &:first-child {
+      .accordion__title {
+        padding: 16px 0 14px;
+      }
+    }
+  }
+
+  .accordion__title {
+    padding: 35px 0 24px;
+
+    font-size: 16px;
+
+    // question number
+    &::before {
+      margin-right: 10px;
+    }
+
+    // arrow drop-down
+    &::after {
+      margin-left: 10px;
+      margin-right: -2px;
+      margin-top: 9px;
+    }
+  }
+
+  .accordion__content {
+    max-width: 100%;
+
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,44 @@
+.questions {
+  padding: 50px 0 140px;
+
+  background:
+    url("../assets/img/bg/bg-bag.png") no-repeat left 8px bottom/154px auto,
+    url("../assets/img/bg/bg-questions.png") no-repeat right 6px top 48px/47% auto,
+    url("../assets/img/bg/bg-water-color-3.png") no-repeat left top -33px/100%;
+
+  @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+    background-image:
+      url("../assets/img/bg/bg-bag@2x.png"),
+      url("../assets/img/bg/bg-questions@2x.png"),
+      url("../assets/img/bg/bg-water-color-3@2x.png");
+  }
+}
+
+.questions__title {
+  margin-bottom: 13px;
+}
+
+.questions__accordion {
+  max-width: 50%;
+}
+
+@media (max-width: $mobile-width) {
+  .questions {
+    padding: 30px 0 50px;
+
+    background: url("../assets/img/bg/bg-bag.png") no-repeat left -7px bottom 160px/154px auto;
+
+    @media (min-resolution: $min-resolution-dpi), (min-resolution: $min-resolution-dppx) {
+      background-image: url("../assets/img/bg/bg-bag@2x.png")
+    }
+  }
+
+  .questions__title {
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .questions__accordion {
+    max-width: 100%;
+  }
+}

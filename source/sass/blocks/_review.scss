@@ -1,0 +1,135 @@
+.review {
+  position: relative;
+  display: flex;
+}
+
+.review__img {
+  flex-shrink: 0;
+
+  width: 364px;
+  padding-top: 8px;
+  margin-right: 32px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.review__content {
+  width: 58%;
+  padding-bottom: 40px;
+  color: rgba($base-font-color, 0.74);
+}
+
+.review__title {
+  padding-top: 48px;
+  margin: 0;
+  margin-bottom: 3px;
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.review__programs {
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.review__programs-item {
+  display: flex;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.review__programs-title {
+  margin-right: 10px;
+
+  a {
+    text-decoration: none;
+    color: rgba($main-assent-primary-color, 1);
+  }
+}
+
+.review__programs-description {
+  margin: 0;
+}
+
+.review__text {
+  margin-bottom: 18px;
+
+  font-size: 17px;
+
+  p {
+    margin: 0;
+    margin-bottom: 21px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review__more {
+  font-size: 17px;
+  color: rgba($main-assent-primary-color, 1);
+}
+
+.review__social {
+  position: absolute;
+  bottom: 0;
+  right: 6.4%;
+}
+
+@media (max-width: $mobile-width) {
+  .review {
+    flex-direction: column;
+  }
+
+  .review__img {
+    max-width: 240px;
+    width: 100%;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 11px;
+  }
+
+  .review__content {
+    width: 100%;
+  }
+
+  .review__programs {
+    margin-bottom: 23px;
+  }
+
+  .review__programs-item {
+    flex-direction: column;
+  }
+
+  .review__text {
+    margin-bottom: 26px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  .review__more {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 21px;
+    font-size: 16px;
+  }
+
+  .review__social {
+    position: static;
+    margin-left: -7px;
+  }
+}
