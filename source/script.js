@@ -42,7 +42,7 @@ const accordionClickHandler = function(evt) {
 };
 
 const addToLocalStorage = function(data) {
-  for (const key of data.keys()) {
+  for (const [key, value] of data.entries()) {
     localStorage.setItem(key, value);
   }
 };
