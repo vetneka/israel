@@ -18,7 +18,7 @@
         <div class="main-logo main-header__main-logo">
           <a class="main-logo__link">
             <picture>
-              <!-- <source srcset="assets/img/img-logo.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp"> -->
+              <source srcset="assets/img/img-logo.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp">
               <!-- 1х: 137px; 2x: 274px -->
               <img src="assets/img/img-logo.png" width="137" height="48"
                     srcset="assets/img/img-logo.png 2x"
@@ -27,7 +27,7 @@
           </a>
         </div>
 
-        <a class="main-header__link main-header__link--call" data-modal="call" href="#">заказать звонок</a>
+        <a class="main-header__link main-header__link--call" data-toggle="modal" data-target="modal-call" href="#">заказать звонок</a>
       </div>
     </div>
   </header>
@@ -131,9 +131,9 @@
         <div class="feedback__inner">
           <h2 class="secondary-head feedback__title">Хочу поехать</h2>
           <p class="text feedback__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-          <form class="form feedback__form" method="GET" action="/">
+          <form class="form feedback__form" method="GET" action="/" data-target="modal-success" name="feedback-form">
             <div class="form__field">
-              <input type="tel" name="user-phone-feedback" id="user-phone-feedback" placeholder="телефон" pattern="\+7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
+              <input type="tel" name="user-phone-feedback" id="user-phone-feedback" placeholder="телефон" pattern="\+7\s*[\(][0-9]{3}[\)]\s*\d{3}\s*\d{2}\s*\d{2}" required>
               <label class="visually-hidden" for="user-phone-feedback">Введите свой телефон</label>
             </div>
 
@@ -282,7 +282,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-1.webp 1x, assets/img/img-review-1@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-1.webp 1x, assets/img/img-review-1@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-1.png" width="364" height="480"
                         srcset="assets/img/img-review-1@2x.png 2x"
@@ -340,7 +340,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-2.webp 1x, assets/img/img-review-2@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-2.webp 1x, assets/img/img-review-2@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-2.png" width="364" height="480"
                         srcset="assets/img/img-review-2@2x.png 2x"
@@ -398,7 +398,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-3.webp 1x, assets/img/img-review-3@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-3.webp 1x, assets/img/img-review-3@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-3.png" width="364" height="480"
                         srcset="assets/img/img-review-3@2x.png 2x"
@@ -456,7 +456,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-4.webp 1x, assets/img/img-review-4@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-4.webp 1x, assets/img/img-review-4@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-4.png" width="364" height="480"
                         srcset="assets/img/img-review-4@2x.png 2x"
@@ -514,7 +514,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-5.webp 1x, assets/img/img-review-5@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-5.webp 1x, assets/img/img-review-5@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-5.png" width="364" height="480"
                         srcset="assets/img/img-review-5@2x.png 2x"
@@ -572,7 +572,7 @@
             <div class="review reviews__item reviews__item--active swiper-slide">
               <div class="review__img">
                 <picture>
-                  <!-- <source srcset="assets/img/img-review-6.webp 1x, assets/img/img-review-6@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="assets/img/img-review-6.webp 1x, assets/img/img-review-6@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 728px -->
                   <img src="assets/img/img-review-6.png" width="364" height="480"
                         srcset="assets/img/img-review-6@2x.png 2x"
@@ -726,14 +726,14 @@
             </div>
 
             <div class="details__contacts-right">
-              <form class="form" method="POST" action="/">
+              <form class="form" method="POST" action="/" data-target="modal-success" name="details-form">
                 <div class="form__field">
                   <input type="text" name="user-name-details" id="user-name-details" placeholder="имя" required>
                   <label class="visually-hidden" for="user-name-details">Введите ваше имя</label>
                 </div>
 
                 <div class="form__field">
-                  <input type="tel" name="user-phone-details" id="user-phone-details" placeholder="телефон" pattern="\+7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
+                  <input type="tel" name="user-phone-details" id="user-phone-details" placeholder="телефон" pattern="\+7\s*[\(][0-9]{3}[\)]\s*\d{3}\s*\d{2}\s*\d{2}" required>
                   <label class="visually-hidden" for="user-phone-details">Введите ваш телефон</label>
                 </div>
 
@@ -796,51 +796,62 @@
     </div>
   </footer>
 
-  <section class="modal page__modal" data-modal="call">
-    <div class="modal__content">
-      <h2 class="secondary-head modal__title">Заказать звонок</h2>
-      <p class="text modal__description">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-      <form class="form" method="POST" action="/">
-        <div class="form__field">
-          <input type="text" name="user-name" id="user-name" placeholder="имя" required>
-          <label class="visually-hidden" for="user-name">Введите ваше имя</label>
+  <template id="template-modal-call">
+    <section class="modal page__modal" id="modal-call" tabindex="-1">
+      <div class="modal__overlay">
+        <div class="modal__body">
+          <div class="modal__content">
+            <h2 class="secondary-head modal__title">Заказать звонок</h2>
+            <p class="text modal__description">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+            <form class="form" method="POST" action="/" data-target="modal-success" name="modal-form">
+              <div class="form__field">
+                <input type="text" name="user-name" id="user-name" placeholder="имя" required>
+                <label class="visually-hidden" for="user-name">Введите ваше имя</label>
+              </div>
+
+              <div class="form__field">
+                <input type="tel" name="user-phone" id="user-phone" placeholder="телефон" pattern="\+7\s*[\(][0-9]{3}[\)]\s*\d{3}\s*\d{2}\s*\d{2}" required>
+                <label class="visually-hidden" for="user-phone">Введите ваш телефон</label>
+                <span class="form__error">Ошибка: неверный формат</span>
+              </div>
+
+              <div class="form__field form__field--checkbox">
+                <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent">
+                <label for="user-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+              </div>
+
+              <div class="form__field form__field--submit">
+                <button class="button button--colored" type="submit">Перезвоните мне</button>
+              </div>
+            </form>
+          </div>
+
+          <button class="modal__close" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
         </div>
+      </div>
+    </section>
+  </template>
 
-        <div class="form__field">
-          <input type="tel" name="user-phone" id="user-phone" placeholder="телефон" pattern="\+7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
-          <label class="visually-hidden" for="user-phone">Введите ваш телефон</label>
-          <span class="form__error">Ошибка: неверный формат</span>
+  <template id="template-modal-success">
+    <section class="modal modal--success page__modal" id="modal-success">
+      <div class="modal__overlay">
+        <div class="modal__body">
+          <div class="modal__content">
+            <h2 class="secondary-head modal__title">Заявка принята</h2>
+            <p class="text modal__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+            <button class="button button--colored modal__button" type="button">Понятно</button>
+          </div>
+
+          <button class="modal__close" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
         </div>
+      </div>
+    </section>
+  </template>
 
-        <div class="form__field form__field--checkbox">
-          <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent">
-          <label for="user-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-        </div>
-
-        <div class="form__field form__field--submit">
-          <button class="button button--colored" type="submit">Перезвоните мне</button>
-        </div>
-      </form>
-    </div>
-
-    <button class="modal__close" type="button">
-      <span class="visually-hidden">Закрыть окно</span>
-    </button>
-  </section>
-
-  <section class="modal modal--success page__modal" data-modal="call-success">
-    <div class="modal__content">
-      <h2 class="secondary-head modal__title">Заявка принята</h2>
-      <p class="text modal__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-      <button class="button button--colored modal__button" type="button">Понятно</button>
-    </div>
-
-    <button class="modal__close" type="button">
-      <span class="visually-hidden">Закрыть окно</span>
-    </button>
-  </section>
-
-  <script src="js/swiper.js"></script>
   <script src="js/script.js"></script>
 </body>
 

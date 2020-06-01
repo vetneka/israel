@@ -17,6 +17,8 @@ var include = require('posthtml-include');
 var del = require('del');
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -44,7 +46,7 @@ gulp.task('server', function () {
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
   gulp.watch('source/assets/**/*', gulp.series('copy', 'refresh'));
-  gulp.watch('source/js/**/*', gulp.series('copy', 'refresh'));
+  gulp.watch('source/**/*.js', gulp.series('scripts', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -57,15 +59,15 @@ gulp.task('images', function () {
       .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
         imagemin.jpegtran({progressive: true}),
-        imagemin.svgo()
+        // imagemin.svgo()
       ]))
-      .pipe(gulp.dest('source/assets/img'));
+      .pipe(gulp.dest('build/assets/img'));
 });
 
 gulp.task('webp', function () {
-  return gulp.src('source/assets/img/**/*.{png,jpg}')
+  return gulp.src('source/assets/img/img-*.{png,jpg}')
       .pipe(webp({quality: 90}))
-      .pipe(gulp.dest('source/assets/img'));
+      .pipe(gulp.dest('build/assets/img'));
 });
 
 gulp.task('svgSprite', function () {
@@ -111,8 +113,8 @@ gulp.task('html', function () {
 gulp.task('copy', function () {
   return gulp.src([
     'source/assets/fonts/**/*.{woff,woff2}',
-    'source/assets/img/**',
-    'source/js/**',
+    // 'source/assets/img/**',
+    // 'source/js/**',
   ], {
     base: 'source'
   })
@@ -123,8 +125,16 @@ gulp.task('clean', function () {
   return del('build');
 });
 
+gulp.task('scripts', function () {
+  return gulp.src('source/script.js')
+    .pipe(plumber())
+    .pipe(webpackStream(require('./webpack.config.js')))
+    .pipe(gulp.dest('build/js/'));
+});
+
 gulp.task('sprite', gulp.series('spritePng', 'svgSprite'));
 
-gulp.task('build', gulp.series('clean', 'css', 'sprite', 'copy', 'html'));
+gulp.task('dev', gulp.series('clean', 'css', 'sprite', 'copy', 'scripts', 'html', 'server'));
+gulp.task('build', gulp.series('clean', 'css', 'copy', 'images', 'webp', 'sprite', 'scripts', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
 
