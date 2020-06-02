@@ -147,6 +147,12 @@
   color: $inverse-font-color;
 }
 
+@media (max-width: $tablet-width) {
+  .features__item-title {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .features {
     padding-top: 16px;
@@ -213,6 +219,8 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 23px;
+
+      font-size: 18px;
     }
   }
 

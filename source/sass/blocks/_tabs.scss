@@ -93,7 +93,7 @@
 
   .tabs__list {
     display: flex;
-    width: calc(100% + #{$container-horizontal-offset-mobile});
+    width: calc(100% + #{$container-horizontal-offset-mobile}); /* stylelint-disable-line */
     margin-right: 0;
     margin-bottom: 14px;
     overflow-x: scroll;

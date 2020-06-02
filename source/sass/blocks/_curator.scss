@@ -46,6 +46,12 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .curator__address {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .curator {
     display: block;
@@ -54,9 +60,6 @@
   .curator__img {
     margin-right: 0;
     margin-bottom: 14px;
-  }
-
-  .curator__body {
   }
 
   .curator__address {

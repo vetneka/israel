@@ -4,41 +4,46 @@ import '@babel/polyfill';
 import svg4everybody from 'svg4everybody';
 import IMask from 'imask';
 import Modal from './js/Modal';
-import { breakpointChecker, featuresSlider, reviewSlider } from './js/Swiper';
+import { breakpointChecker } from './js/Swiper';
 
-const tabClickHandler = (evt) => {
-  const { target } = evt;
-
-  if (!target.closest('.button')) return;
-
+const tabClickHandler = function(evt) {
   evt.preventDefault();
 
-  if (target.closest('.button--colored')) return;
+  if (!evt.target.closest('.button') || evt.target.closest('.button--colored')) {
+    return;
+  };
 
-  const tabs = target.closest('.tabs');
-  const current = tabs.querySelector('.button--colored');
-  current.classList.remove('button--colored');
+  const previousTabButton = this.querySelector('.button--colored');
+  previousTabButton.classList.remove('button--colored');
 
-  const currentTabContent = document.querySelector(current.hash);
-  currentTabContent.classList.remove('tabs__content-item--active');
+  const previousTabContent = this.querySelector(previousTabButton.hash);
+  previousTabContent.classList.remove('tabs__content-item--active');
 
-  target.classList.add('button--colored');
+  const currentTabButton = evt.target.closest('.button');
+  currentTabButton.classList.add('button--colored');
 
-  const nextTabContent = document.querySelector(target.hash);
-  nextTabContent.classList.add('tabs__content-item--active');
+  const currentTabContent = this.querySelector(currentTabButton.hash);
+  currentTabContent.classList.add('tabs__content-item--active');
 };
 
 const accordionClickHandler = function(evt) {
   evt.preventDefault();
 
-  if (!evt.target.closest('.accordion__item') || evt.target.closest('.accordion__item--active')) return;
+  if (!evt.target.closest('.accordion__title')) {
+    return;
+  };
 
-  const accordion = evt.target.closest('[data-accordion="questions"]');
   const currentItem = evt.target.closest('.accordion__item');
-  const previousItem = accordion.querySelector('.accordion__item--active');
+  const previousItem = this.querySelector('.accordion__item--active');
 
-  previousItem.classList.remove('accordion__item--active');
-  currentItem.classList.add('accordion__item--active');
+  if (currentItem.classList.contains('accordion__item--active')) {
+    currentItem.classList.remove('accordion__item--active');
+  } else if (previousItem) {
+    previousItem.classList.remove('accordion__item--active');
+    currentItem.classList.add('accordion__item--active');
+  } else {
+    currentItem.classList.add('accordion__item--active');
+  }
 };
 
 const addToLocalStorage = function(data) {
@@ -47,9 +52,8 @@ const addToLocalStorage = function(data) {
   }
 };
 
-const formHandler = function(form) {
+const formHandler = function(form, modal = null) {
   const phoneInput = form.querySelector('input[type="tel"]');
-  let phoneInputMask;
 
   [...form.elements].forEach((element) => {
     if (localStorage.getItem(element.name)) {
@@ -57,37 +61,40 @@ const formHandler = function(form) {
     }
   });
 
-  phoneInput.addEventListener('focus', () => {
-    phoneInputMask = IMask(
-      phoneInput, {
-        mask: '+7 (000) 000 00 00',
-        placeholderChar: '_',
-        lazy: false,
-      });
+  const patternMask = new IMask(phoneInput, {
+    mask: '{+7} (000) 000 00 00',
+    lazy: true,
+    placeholderChar: '_'
+  });
+
+  phoneInput.addEventListener('focus', function() {
+    patternMask.updateValue();
+    patternMask.updateOptions({ lazy: false });
+  });
+
+  phoneInput.addEventListener('blur', function() {
+    patternMask.updateOptions({ lazy: true });
+
+    if (!patternMask.masked.rawInputValue) {
+      patternMask.value = '';
+    }
   });
 
   form.addEventListener('submit', function(evt) {
     evt.preventDefault();
 
-    console.log(form)
-    const formData = new FormData(form);
-
-    addToLocalStorage(formData);
+    addToLocalStorage(new FormData(form));
     form.reset();
-    phoneInputMask.updateValue();
 
-    const currentShowedModal = document.querySelector('.modal--show');
-
-    if (currentShowedModal) {
-      currentShowedModal.classList.remove('modal--show');
+    if (modal) {
+      modal.close();
     }
 
-    new Modal(evt.target.dataset.target).render();
+    new Modal(form.dataset.target).render();
   });
 };
 
 window.addEventListener('load', () => {
-  const storage = window.localStorage;
   breakpointChecker();
   svg4everybody();
 
@@ -101,15 +108,15 @@ window.addEventListener('load', () => {
   callOrder.addEventListener('click', (evt) => {
     evt.preventDefault();
 
-    const callModal = new Modal(evt.target.dataset.target).render();
-    console.log(callModal)
-    const modalForm = document.querySelector('form[name="modal-form"]');
+    const callModal = new Modal(evt.target.dataset.target);
+    callModal.render();
 
-    formHandler(modalForm);
+    const modalForm = document.querySelector('form[name="modal-form"]');
+    modalForm.querySelector('input[name="user-name"]').focus();
+
+    formHandler(modalForm, callModal);
   });
 
-  const forms = [...document.querySelectorAll('main form')];
-
-  forms.forEach((form) => formHandler(form));
+  [...document.querySelectorAll('main form')].forEach((form) => formHandler(form));
 });
 

@@ -186,6 +186,33 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .details {
+    padding-top: 18px;
+    padding-bottom: 64px;
+    overflow: hidden;
+  }
+
+  .details__map {
+    top: 140px;
+  }
+
+  .details__left {
+    width: 48%;
+  }
+
+  .details__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .details__contacts-left {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .details {
     padding-top: 18px;
@@ -215,6 +242,7 @@
 
   .details__map {
     position: relative;
+    top: 0;
     left: 50%;
 
     width: auto;

@@ -12,7 +12,6 @@
   max-width: 403px;
   margin-left: auto;
   margin-right: 60px;
-
 }
 
 .gallery__title {
@@ -37,6 +36,18 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .gallery {
+    padding-top: 30px;
+    padding-bottom: 15%;
+  }
+
+  .gallery__inner {
+    margin-top: 124px;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .gallery {
     padding: 22px 0 50px;
@@ -46,6 +57,7 @@
   }
 
   .gallery__inner {
+    margin-top: 0;
     margin-right: auto;
     margin-left: auto;
   }

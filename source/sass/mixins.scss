@@ -10,8 +10,8 @@
   transition: $property 0.3s ease-in-out;
 }
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+@function strip-unit($value) { /* stylelint-disable-line */
+  @return $value / ($value * 0 + 1); /* stylelint-disable-line */
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -20,12 +20,14 @@
   $u3: unit($min-font-size);
   $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 { /* stylelint-disable-line */
     & {
       font-size: $min-font-size;
+
       @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})); /* stylelint-disable-line */
       }
+
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }

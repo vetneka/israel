@@ -14,14 +14,20 @@ const getBodyScrollTop = function() {
 };
 
 export default class Modal {
-  constructor(modalType) {
-    const modalTemplate = document.querySelector(`#template-${modalType}`);
-    const modalContent = templateContent(modalTemplate);
+  constructor(content) {
+    const modalTemplate = document.querySelector(`#template-modal`);
+    const modal = templateContent(modalTemplate);
 
-    this.modal = modalContent.querySelector('.modal');
+    const modalContentTemplate = document.querySelector(`#content-${content}`);
+    const modalContent = templateContent(modalContentTemplate).querySelector('.modal__content');
+
+    modal.querySelector('.modal__body').insertAdjacentElement('afterbegin', modalContent);
+
+    this.modal = modal.querySelector('.modal');
     this.buttonClose = this.modal.querySelector('.modal__close');
 
     this.onKeydownModalBind = this.onKeydownModal.bind(this);
+    this.onClickModalBind = this.onClickModal.bind(this);
 
     this.focusTrap = createFocusTrap(this.modal, {
       onDeactivate: () => {
@@ -49,18 +55,19 @@ export default class Modal {
     }
   }
 
-  addEvents() {
-    this.modal.addEventListener('click', (evt) => {
-      if (
-        evt.target.classList.contains('modal__overlay')
-        || evt.target.classList.contains('modal__close')
-        || evt.target.classList.contains('modal__button')
-      ) {
-        evt.preventDefault();
-        this.close();
-      }
-    });
+  onClickModal(evt) {
+    if (
+      evt.target.classList.contains('modal__overlay')
+      || evt.target.classList.contains('modal__close')
+      || evt.target.classList.contains('modal__button')
+    ) {
+      evt.preventDefault();
+      this.close();
+    }
+  }
 
+  addEvents() {
+    this.modal.addEventListener('click', this.onClickModalBind);
     window.addEventListener('keydown', this.onKeydownModalBind);
   }
 

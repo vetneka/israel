@@ -137,4 +137,3 @@ gulp.task('sprite', gulp.series('spritePng', 'svgSprite'));
 gulp.task('dev', gulp.series('clean', 'css', 'sprite', 'copy', 'scripts', 'html', 'server'));
 gulp.task('build', gulp.series('clean', 'css', 'copy', 'images', 'webp', 'sprite', 'scripts', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
-
