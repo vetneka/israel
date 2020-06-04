@@ -69,6 +69,18 @@
         @include retina-sprite($icon-religious-white-group);
       }
     }
+
+    &:hover {
+      // Icon black
+      &::before {
+        opacity: 1;
+      }
+
+      // Icon gradient
+      &::after {
+        opacity: 0;
+      }
+    }
   }
 
   &--icon {
@@ -102,7 +114,7 @@
     // Icon gradient
     &::after {
       position: absolute;
-      left: 20px;
+      left: 21px;
       opacity: 0;
     }
 

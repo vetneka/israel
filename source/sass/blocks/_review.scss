@@ -84,6 +84,12 @@
   right: 6.4%;
 }
 
+@media (max-width: $tablet-width) {
+  .review__programs-item {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .review {
     flex-direction: column;
@@ -104,10 +110,6 @@
 
   .review__programs {
     margin-bottom: 23px;
-  }
-
-  .review__programs-item {
-    flex-direction: column;
   }
 
   .review__text {

@@ -114,7 +114,7 @@
   align-items: flex-start;
 
   width: 100%;
-  margin-top: 122px;
+  margin-top: 118px;
 
   .form {
     flex-direction: row;
@@ -134,7 +134,7 @@
 
       .button {
         width: 100%;
-        padding: 18px 20px 17px;
+        padding: 20px;
       }
     }
 
@@ -154,8 +154,8 @@
 }
 
 .details__contacts-left {
-  width: 30%;
-  margin-right: 35px;
+  width: 32%;
+  margin-right: 31px;
 
   .text {
     font-size: 13px;
@@ -281,7 +281,7 @@
 
       .form__field {
         margin-right: 0;
-        margin-bottom: 11px;
+        margin-bottom: 6px;
 
         &--submit {
           width: calc(100% - 24px);

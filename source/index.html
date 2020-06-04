@@ -16,7 +16,7 @@
         <a class="main-header__link main-header__link--phone" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
 
         <div class="main-logo main-header__main-logo">
-          <a class="main-logo__link" href="#">
+          <a class="main-logo__link">
             <picture>
               <source srcset="assets/img/img-logo.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp">
               <!-- 1х: 137px; 2x: 274px -->
@@ -39,15 +39,15 @@
 
         <p class="text text--promo hero__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
 
-        <div class="scroll-down hero__scroll-down">
+        <a class="scroll-down hero__scroll-down" href="#section-about">
           <svg class="scroll-down__icon" width="76" height="131">
             <use xlink:href="assets/img/svg-sprite.svg#icon-scroll-down"/>
           </svg>
-        </div>
+        </a>
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="section-about">
       <div class="container">
         <div class="about__inner">
           <h2 class="secondary-head about__title">О программе</h2>
@@ -56,7 +56,20 @@
 
         <div class="video about__video">
           <div class="video__inner">
-            <video src="https://www.youtube.com/watch?v=PPmlxZiOS7w" poster="assets/img/bg/bg-video-poster.png"></video>
+            <div class="video__poster">
+              <picture>
+                <!-- <source srcset="assets/img/img-video-poster.webp 1x, assets/img/img-video-poster@2x.webp 2x" type="image/webp"> -->
+                <!-- 1х: 870px; 2x: 1740px -->
+                <img src="assets/img/img-video-poster.png" width="870" height="460"
+                      srcset="assets/img/img-video-poster@2x.png 2x"
+                      alt="video poster">
+              </picture>
+
+              <video>
+                <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
+              </video>
+            </div>
 
             <button class="video__button" type="button">
               <span class="visually-hidden">Воспроизвести видео</span>
@@ -752,7 +765,7 @@
     <div class="container">
       <div class="main-footer__inner">
         <div class="main-logo main-footer__main-logo">
-          <a class="main-logo__link" href="#">
+          <a class="main-logo__link">
             <picture>
               <source srcset="assets/img/img-logo-gray.webp 1x, assets/img/img-logo@2x.webp 2x" type="image/webp">
               <!-- 1х: 85px; 2x: 170px -->
@@ -833,7 +846,7 @@
         </div>
 
         <div class="form__field form__field--checkbox">
-          <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent">
+          <input class="visually-hidden" type="checkbox" name="user-consent" id="user-consent" required>
           <label for="user-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
 

@@ -78,6 +78,9 @@
   width: 76px;
   height: 29%;
   margin: 0 auto;
+
+  cursor: pointer;
+  outline: none;
 }
 
 @supports (-webkit-background-clip: text) {

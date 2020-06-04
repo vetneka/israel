@@ -77,6 +77,10 @@
     .form__field {
       margin-bottom: 0;
     }
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+      padding-right: 40%;
+    }
   }
 
   .feedback__button {

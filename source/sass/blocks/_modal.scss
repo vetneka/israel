@@ -1,43 +1,6 @@
 .modal {
   display: none;
 
-  // &--success {
-  //   .modal__inner {
-  //     padding-top: 120px;
-  //     padding-bottom: 110px;
-  //     text-align: center;
-  //   }
-
-  //   .modal__content {
-  //     position: relative;
-
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-
-  //     padding-top: 96px;
-
-  //     &::before {
-  //       content: "";
-  //       position: absolute;
-  //       top: 0;
-  //       left: 50%;
-  //       transform: translateX(-50%);
-
-  //       width: 66px;
-  //       height: 64px;
-  //       background-image: url("../assets/img/icons/svg/icon-checkmark.svg");
-  //       background-repeat: no-repeat;
-  //       background-size: contain;
-  //     }
-  //   }
-
-  //   .modal__description {
-  //     max-width: 80%;
-  //     padding-right: 0;
-  //   }
-  // }
-
   &--show {
     display: block;
   }
@@ -104,6 +67,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  outline: none;
   cursor: pointer;
 
   @include transition(opacity);
